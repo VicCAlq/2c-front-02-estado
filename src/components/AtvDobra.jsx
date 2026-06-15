@@ -42,23 +42,23 @@ const estilo = {
   }
 }
 
-export default function AtvDobra(numero) {
-  const [numero, numeroDobrado] = useState(0)
+export default function AtvDobra({numero}) {
+  const [valor1, setNumeroDobrado] = useState(numero)
 
   function dobrar() {
-    numeroDobrado(numero * 2)
+    setNumeroDobrado(valor1 * 2)
   }
-   return(
+   return(<>
     <div style={estilo.view}>
       <p style={estilo.texto}>
-        {AtvDobra}
+        {valor1}
       </p>
-      <div style={estilo.viewBotoes}>
-        <button style={estilo.botao} onClick={() => dobrar()}>
+      <div>
+        <button style={estilo.botao} onClick={dobrar}>
           <p style={estilo.textoBotao}>Dobrar</p>
         </button>
       </div>
     </div>
-   )
+</>)
 }
 
