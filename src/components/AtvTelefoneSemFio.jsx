@@ -2,8 +2,10 @@
 [ATIVIDADE TELEFONE SEM FIO]
 
 Crie e exporte por padrão um componente chamado "AtvTelefoneSemFio" que não recebe argumentos.
-Este componente deve retornar uma <div> com dois <button> lado a lado, e uma <div> abaixo dos botões.
-Cada <button> ao ser clicado, deve inserir na <div> abaixo um <p> e um <input>, 
-e substituir o conteúdo anterior dessa <div> de baixo dos botões.
-O texto digitado no <input> ativado por um <button> deve ser exibido no <p> do outro <button>, e vice-versa.
+Este componente deve retornar uma <View> com dois <Pressable> lado a lado, e uma <View> abaixo dos botões.
+Cada <Pressable> ao ser clicado, deve inserir na <View> abaixo um <Text> e um <TextInput>, 
+e substituir o conteúdo anterior dessa <View> de baixo dos botões.
+O texto digitado no <TextInput> ativado por um <Pressable> deve ser exibido no <Text> do outro <Pressable>, e vice-versa.
 */
+
+export default AtvTelefoneSemFio;
