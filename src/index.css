@@ -1,11 +1,15 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #FDFBF7;
-  font-family: 'Outfit', system-ui, sans-serif;
-  color: #2C2A29;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FDFBF7;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: #2C2A29;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 }
 
 #root {
@@ -13,8 +17,4 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-* {
-  box-sizing: border-box;
 }

@@ -7,7 +7,7 @@ e um <button>, que ao ser clicado, modifica o valor do número para dobrar o val
 */
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import { Zap } from 'lucide-react';
 
 export default function AtvDobra({ numero = 2 }) {
   const [valor, setValor] = useState(numero);
@@ -17,22 +17,9 @@ export default function AtvDobra({ numero = 2 }) {
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-      style={{ 
-        padding: '48px', 
-        borderRadius: '24px', 
-        background: 'rgba(255, 255, 255, 0.7)', 
-        backdropFilter: 'blur(20px)',
-        border: '1px solid rgba(255, 255, 255, 0.4)', 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '32px', 
-        alignItems: 'center', 
-        width: '100%',
-        boxSizing: 'border-box',
-        boxShadow: '0 10px 40px -10px rgba(0,0,0,0.03), inset 0 0 0 1px rgba(255,255,255,0.5)'
-      }}
+      className="p-12 rounded-3xl bg-white/70 backdrop-blur-xl border border-white/40 flex flex-col gap-8 items-center w-full shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03),inset_0_0_0_1px_rgba(255,255,255,0.5)]"
     >
-      <div style={{ position: 'relative', minHeight: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div className="relative min-h-[80px] flex items-center justify-center">
         <AnimatePresence mode="popLayout">
           <motion.p 
             key={valor}
@@ -40,14 +27,7 @@ export default function AtvDobra({ numero = 2 }) {
             animate={{ y: 0, opacity: 1, scale: 1, filter: 'blur(0px)' }}
             exit={{ y: -40, opacity: 0, scale: 0.8, filter: 'blur(8px)' }}
             transition={{ type: "spring", stiffness: 350, damping: 30 }}
-            style={{ 
-              margin: 0, 
-              fontSize: '84px',
-              fontWeight: '300',
-              color: '#2C2A29',
-              lineHeight: '1',
-              letterSpacing: '-0.04em'
-            }}
+            className="m-0 text-[84px] font-light text-[#2C2A29] leading-none tracking-tight"
           >
             {valor}
           </motion.p>
@@ -57,27 +37,9 @@ export default function AtvDobra({ numero = 2 }) {
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.96 }}
         onClick={() => setValor(valor * 2)}
-        style={{ 
-          padding: '16px 40px', 
-          borderRadius: '16px', 
-          border: '1px solid #EAE6E1', 
-          background: '#FFFFFF', 
-          color: '#2C2A29', 
-          cursor: 'pointer', 
-          fontWeight: '400', 
-          fontSize: '16px',
-          letterSpacing: '0.01em',
-          width: '100%',
-          boxSizing: 'border-box',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
-          transition: 'border-color 0.3s ease',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '8px'
-        }}
+        className="px-10 py-4 rounded-2xl border border-[#EAE6E1] bg-white text-[#2C2A29] cursor-pointer font-normal text-base tracking-wide w-full shadow-[0_4px_12px_rgba(0,0,0,0.02)] transition-colors duration-300 flex items-center justify-center gap-2"
       >
-       
+        <Zap size={18} strokeWidth={2.5} />
         Dobrar Valor
       </motion.button>
     </motion.div>

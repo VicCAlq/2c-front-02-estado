@@ -38,39 +38,21 @@ export default function AtvCumprimenta() {
     setSaudacao(`É um imenso prazer conhecer você, ${nome}.`);
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      handleSave();
-    }
-  };
-
   return (
     <motion.div 
       initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      style={{ 
-        padding: '40px', 
-        borderRadius: '24px', 
-        background: 'rgba(255, 255, 255, 0.7)', 
-        backdropFilter: 'blur(20px)',
-        border: '1px solid rgba(255, 255, 255, 0.4)', 
-        display: 'flex', 
-        flexDirection: 'column', 
-        gap: '24px', 
-        width: '100%',
-        boxSizing: 'border-box',
-        boxShadow: '0 10px 40px -10px rgba(0,0,0,0.03), inset 0 0 0 1px rgba(255,255,255,0.5)'
-      }}
+      className="p-10 rounded-3xl bg-white/70 backdrop-blur-xl border border-white/40 flex flex-col gap-6 w-full shadow-[0_10px_40px_-10px_rgba(0,0,0,0.03),inset_0_0_0_1px_rgba(255,255,255,0.5)]"
     >
-      <p style={{ margin: 0, color: '#4A4543', fontSize: '20px', fontWeight: '400', letterSpacing: '-0.02em' }}>
+      <p className="m-0 text-[#4A4543] text-xl font-normal tracking-tight">
         Olá, qual é o seu nome?
       </p>
-      <div style={{ display: 'flex', gap: '16px', width: '100%', flexWrap: 'wrap', position: 'relative' }}>
+      <div className="flex flex-wrap gap-4 w-full relative">
         <motion.div 
           animate={shake ? { x: [-8, 8, -6, 6, -3, 3, 0] } : {}}
           transition={{ duration: 0.4 }}
-          style={{ flex: '1 1 200px', position: 'relative' }}
+          className="flex-[1_1_200px] relative"
         >
           <input 
             type="text" 
@@ -79,46 +61,15 @@ export default function AtvCumprimenta() {
             onChange={(e) => setNome(e.target.value)}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
-            onKeyDown={handleKeyDown}
-            style={{ 
-              width: '100%',
-              padding: '16px 20px', 
-              borderRadius: '16px', 
-              border: '1px solid',
-              borderColor: shake ? '#ef4444' : (isFocused ? '#D6D1CB' : '#EAE6E1'),
-              background: '#FFFFFF', 
-              color: '#2C2A29', 
-              outline: 'none',
-              fontSize: '16px',
-              fontWeight: '400',
-              boxSizing: 'border-box',
-              transition: 'all 0.3s ease',
-              boxShadow: shake ? '0 0 0 3px rgba(239, 68, 68, 0.1)' : (isFocused ? '0 4px 12px rgba(0,0,0,0.02)' : 'none')
-            }}
+            onKeyDown={(e) => e.key === 'Enter' && handleSave()}
+            className={`w-full px-5 py-4 rounded-2xl border bg-white text-[#2C2A29] outline-none text-base font-normal transition-all duration-300 ${shake ? 'border-red-500 shadow-[0_0_0_3px_rgba(239,68,68,0.1)]' : (isFocused ? 'border-[#D6D1CB] shadow-[0_4px_12px_rgba(0,0,0,0.02)]' : 'border-[#EAE6E1]')}`}
           />
         </motion.div>
         <motion.button 
           whileHover={{ scale: 1.02, backgroundColor: '#3A3634' }}
           whileTap={{ scale: 0.96 }}
           onClick={handleSave}
-          style={{ 
-            padding: '16px 32px', 
-            borderRadius: '16px', 
-            border: 'none', 
-            background: '#2C2A29', 
-            color: '#FFFFFF', 
-            cursor: 'pointer', 
-            fontWeight: '400',
-            fontSize: '16px',
-            letterSpacing: '0.01em',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
-            flex: '0 1 auto',
-            boxSizing: 'border-box',
-            transition: 'background-color 0.3s ease',
-            boxShadow: '0 4px 14px rgba(0,0,0,0.1)'
-          }}
+          className="px-8 py-4 rounded-2xl border-none bg-[#2C2A29] text-white cursor-pointer font-normal text-base tracking-wide flex items-center justify-center gap-2 flex-[0_1_auto] transition-colors duration-300 shadow-[0_4px_14px_rgba(0,0,0,0.1)]"
         >
           <Check size={18} strokeWidth={2.5} />
           Salvar
@@ -131,17 +82,9 @@ export default function AtvCumprimenta() {
             animate={{ opacity: 1, height: 'auto', y: 0 }}
             exit={{ opacity: 0, height: 0, y: -5 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            style={{ overflow: 'hidden' }}
+            className="overflow-hidden"
           >
-            <p style={{ 
-                margin: 0, 
-                color: '#6A635F', 
-                marginTop: '8px',
-                fontSize: '17px',
-                fontWeight: '300',
-                letterSpacing: '-0.01em'
-              }}
-            >
+            <p className="m-0 text-[#6A635F] mt-2 text-[17px] font-light tracking-tight">
               {saudacao}
             </p>
           </motion.div>
