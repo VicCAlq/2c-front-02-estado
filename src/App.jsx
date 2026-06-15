@@ -1,6 +1,6 @@
 import Placar from './components/Placar';
 import InputTexto from './components/InputTexto';
-
+import AtvDobra from './components/AtvDobra';
 const styles = {
   container: {
     flex: 1,
@@ -18,6 +18,7 @@ export default function App() {
     <div style={styles.container}>
       <Placar/>
       <InputTexto/>
+      <AtvDobra valor={2}/>
     </div>
   );
 }
