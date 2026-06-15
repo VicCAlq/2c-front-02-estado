@@ -19,3 +19,21 @@ _________________________________
 | É um prazer lhe conhecer...   |
 |_______________________________|
 */
+export default function AtvCumprimenta () {
+
+    return (
+    <div>
+        <p>Olá, qual é seu nome?</p>
+        <input type="text"
+        type="text"
+        value={textoInserido}
+      onChange={(e) => setTextoInserido(e.target.value)}
+      placeholder="Digite aqui o novo texto"
+        />
+        <button style={estilo.botao} onClick={() => setTexto(textoInserido)}>
+        <p style={estilo.textoBotao}>Salvar texto</p>
+      </button>
+    </div>
+    )
+
+}
