@@ -1,5 +1,7 @@
 import Placar from './components/Placar';
 import InputTexto from './components/InputTexto';
+// import Number from './components/AtvDobra';
+
 
 const styles = {
   container: {
@@ -16,8 +18,11 @@ const styles = {
 export default function App() {
   return (
     <div style={styles.container}>
-      <Placar/>
+      {/* <Placar/> */}
+
+      
       <InputTexto/>
+      
     </div>
   );
 }

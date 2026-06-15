@@ -44,7 +44,8 @@ const estilo = {
 export default function InputTexto() {
   // Criação das variáveis que armazenam o texto digitado, e o texto salvo
   const [textoInserido, setTextoInserido] = useState("")
-  const [texto, setTexto] = useState("Quem é este Pokemon?")
+  const [texto, setTexto] = useState("Vizinho 1")
+  
 
   // Parte visual do componente
   return(
