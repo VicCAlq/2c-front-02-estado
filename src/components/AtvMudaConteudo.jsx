@@ -8,3 +8,41 @@ Ao clicar no segundo <button>, o conteúdo dessa <div> deve ser substituído por
 onde cada uma destas <divs> deve ter o tamanho de 200px de altura por 200px de largura, 
 a da esquerda deve ter a cor "purple", a do meio a cor "teal" e a da direita a cor "orange".
 */
+import { useState } from "react"
+
+export default function AtvMudaConteudo() {
+    const [texto, setTexto] = useState(<></>)
+
+    const style = {
+        esquerda: {
+            width: "200px",
+            height: "200px",
+            backgroundColor: "purple"
+        },
+        meio: {
+            width: "200px",
+            height: "200px",
+            backgroundColor: "teal"
+        },
+        direita: {
+            width: "200px",
+            height: "200px",
+            backgroundColor: "orange"
+        }
+    }
+    return (
+        <div>
+            <button onClick={() => setTexto(<p>'Página em construção'</p>)}> Botão 1 </button>
+            <button onClick={() => setTexto(
+                <div style={{ display: "flex", flexDirection: "row"}}>
+                    <div style={style.esquerda}></div>
+                    <div style={style.meio}></div>
+                    <div style={style.direita}></div>
+                </div>
+            )}> Botão 2 </button>
+            <div>
+                {texto}
+            </div>
+        </div>
+    )
+}
