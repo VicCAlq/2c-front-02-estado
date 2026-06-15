@@ -18,11 +18,9 @@ const styles = {
 export default function App() {
   return (
     <div style={styles.container}>
-      {/* <Placar/> */}
-
-      
+      <Placar/>
       <InputTexto/>
-      
+      <p></p>
     </div>
   );
 }

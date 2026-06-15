@@ -42,25 +42,29 @@ export default function Placar() {
 
   // Funções que vão ser executadas pelos botões
   function marcarPonto() {
-    setPlacar(placar + 1)
+    setPlacar(placar * 2)
   }
 
   function perderPonto() {
-    setPlacar(placar - 1)
+    setPlacar(placar / 2)
   }
 
   // Parte visual do componente
   return(
     <div style={estilo.view}>
-      <p style={estilo.texto}>
-        {placar}
-      </p>
+      
+      <input
+        type="number"
+        value={placar}
+        style={estilo.texto}
+        onChange={(e) => setPlacar(e.target.value)}
+      />
       <div style={estilo.viewBotoes}>
         <button style={estilo.botao} onClick={() => marcarPonto()}>
-          <p style={estilo.textoBotao}>Mais um</p>
+          <p style={estilo.textoBotao}>Vezes dois</p>
         </button>
         <button style={estilo.botao} onClick={() => perderPonto()}>
-          <p style={estilo.textoBotao}>Menos um</p>
+          <p style={estilo.textoBotao}>dividido por dois</p>
         </button>
       </div>
     </div>
