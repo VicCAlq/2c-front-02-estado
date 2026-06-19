@@ -28,13 +28,23 @@ export default function AtvMudaConteudo() {
             width: "200px",
             height: "200px",
             backgroundColor: "orange"
+        },
+        botao: {
+            borderRadius: "5px",
+            backgroundColor: "#505560",
+            padding: "10px",
+            margin: "10px",
+        },
+        texto: {
+            color: "#eee",
+            fontSize: "32px",
         }
     }
     return (
         <div>
-            <button onClick={() => setTexto(<p>'Página em construção'</p>)}> Botão 1 </button>
-            <button onClick={() => setTexto(
-                <div style={{ display: "flex", flexDirection: "row"}}>
+            <button style={style.botao} onClick={() => setTexto(<p style={style.texto}>"Página em construção"</p>)}> Botão 1 </button>
+            <button style={style.botao} onClick={() => setTexto(
+                <div style={{ display: "flex", flexDirection: "row" }}>
                     <div style={style.esquerda}></div>
                     <div style={style.meio}></div>
                     <div style={style.direita}></div>
