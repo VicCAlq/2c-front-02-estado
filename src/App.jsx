@@ -2,6 +2,7 @@ import Placar from './components/Placar';
 import InputTexto from './components/InputTexto';
 import AtvCumprimenta from './components/AtvCumprimenta';
 import AtvDobra from "./components/AtvDobra";
+import AtvTelefoneSemFio from './components/AtvTelefoneSemFio';
 
 const styles = {
   container: {
@@ -22,6 +23,7 @@ export default function App() {
       <InputTexto/>
       <AtvCumprimenta/>
       <AtvDobra/>
+      <AtvTelefoneSemFio/>
     </div>
   );
 }
