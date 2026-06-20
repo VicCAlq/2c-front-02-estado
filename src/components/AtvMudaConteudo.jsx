@@ -8,3 +8,12 @@ Ao clicar no segundo <button>, o conteúdo dessa <div> deve ser substituído por
 onde cada uma destas <divs> deve ter o tamanho de 200px de altura por 200px de largura, 
 a da esquerda deve ter a cor "purple", a do meio a cor "teal" e a da direita a cor "orange".
 */
+export default function AtvMudaConteudo () {
+    return (
+        <div>
+            <button onClick={() => }></button>
+            <button></button>
+            <div></div>
+        </div>
+    )
+}
