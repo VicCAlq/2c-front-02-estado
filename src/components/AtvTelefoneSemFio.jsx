@@ -7,3 +7,13 @@ Cada <button> ao ser clicado, deve inserir na <div> abaixo um <p> e um <input>,
 e substituir o conteúdo anterior dessa <div> de baixo dos botões.
 O texto digitado no <input> ativado por um <button> deve ser exibido no <p> do outro <button>, e vice-versa.
 */
+import { useState } from "react";
+export default function AtvTelefoneSemFio () {
+    return (
+        <div>
+            <button onClick={() => (<p></p><input></input>)}>
+
+            </button>
+        </div>
+    )
+}
