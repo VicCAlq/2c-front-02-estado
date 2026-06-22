@@ -1,5 +1,8 @@
 import Placar from './components/Placar';
 import InputTexto from './components/InputTexto';
+import AtvDobra from './components/AtvDobra';
+import AtvMudaconteudo from './components/AtvMudaConteudo';
+import AtvCumprimenta from './components/AtvCumprimenta';
 
 const styles = {
   container: {
@@ -18,6 +21,9 @@ export default function App() {
     <div style={styles.container}>
       <Placar/>
       <InputTexto/>
+      <AtvDobra numero = {1} />
+      <AtvMudaconteudo/>
+      <AtvCumprimenta/>
     </div>
-  );
+  )
 }
