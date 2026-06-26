@@ -1,6 +1,7 @@
 import AtvCumprimenta from './components/AtvCumprimenta.jsx';
 import AtvDobra from './components/AtvDobra.jsx';
 import AtvMudaConteudo from './components/AtvMudaConteudo.jsx'
+import AtvTelefoneSemFio from './components/AtvTelefoneSemFio.jsx'
 import './App.css'
 
 const styles = {
@@ -22,6 +23,7 @@ export default function App() {
         <AtvCumprimenta />
         <AtvDobra numero={1} />
         <AtvMudaConteudo />
+        <AtvTelefoneSemFio />
         </div>
     );
 }

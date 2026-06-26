@@ -12,17 +12,26 @@ import { useState } from 'react'
 
 export default function AtvTelefoneSemFio() {
     const [botaoSel, defBotaoSel] = useState(0)
-    const [mensagemA, defMensagemA] = useState("")
-    const [mensagemB, defMensagemB] = useState("")
+    const [mensagemA, defMensagemA] = useState("Não há mensagens.")
+    const [mensagemB, defMensagemB] = useState("Não há mensagens.")
 
     return (
         <div>
-            <button>A</button>
-            <button>B</button>
-            <div>{ 
-
-            }</div>
+            <button onClick={ () => defBotaoSel(1) }>A</button>
+            <button onClick={ () => defBotaoSel(2) }>B</button>
+            <div>{ botaoSel != 0 ? (
+                <>
+                <p>{ botaoSel == 1 ? mensagemB : 
+                mensagemA }</p>
+                <input type="text" value={ botaoSel == 1 ? mensagemA : 
+                mensagemB } onChange={ (e) => {
+                    if (botaoSel == 1)
+                        defMensagemA(e.target.value)
+                    else
+                        defMensagemB(e.target.value)
+                } } />
+                </>
+            ) : <p>Comece a conversar pressionando nos botões!</p> }</div>
         </div>
     )
 }
-// TODO: TERMINAR O TELEFONE!
