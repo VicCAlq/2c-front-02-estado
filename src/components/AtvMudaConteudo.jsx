@@ -12,7 +12,6 @@ import { useState } from "react"
 
 export default function AtvMudaConteudo() {
     const [texto, setTexto] = useState(<></>)
-
     const style = {
         esquerda: {
             width: "200px",
