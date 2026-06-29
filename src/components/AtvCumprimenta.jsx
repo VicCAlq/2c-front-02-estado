@@ -19,3 +19,30 @@ _________________________________
 | É um prazer lhe conhecer...   |
 |_______________________________|
 */
+
+import { useState } from "react"
+export default function AtvCumprimenta() {
+    const [nome, setNome] = useState('')
+    const [cumprimento, setCumprimento] = useState(false)
+    const style = {
+        botao: {
+            borderRadius: "5px",
+            backgroundColor: "#505560",
+            padding: "10px",
+            margin: "10px",
+
+            texto: {
+                color: "#eee",
+                fontSize: "32px",
+            }
+        }
+    }
+    return (
+        <div>
+            <p style={style.texto}>Olá, qual seu nome?</p>
+            <input type="text" value={nome} onChange={(nome) => setNome(nome.target.value)} />
+            <button style={style.botao} onClick={() => setCumprimento(true)}>Salvar</button>
+            {cumprimento && <p style={style.texto}>É um prazer lhe conhecer, {nome}</p>}
+        </div>
+    )
+}
