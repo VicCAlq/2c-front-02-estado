@@ -16,8 +16,8 @@ const styles = {
 export default function App() {
   return (
     <div style={styles.container}>
-      <Placar/>
-      <InputTexto/>
+      <Placar />
+      <InputTexto />
     </div>
   );
 }
