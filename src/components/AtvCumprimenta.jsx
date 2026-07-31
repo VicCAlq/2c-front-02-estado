@@ -19,3 +19,67 @@ _________________________________
 | É um prazer lhe conhecer...   |
 |_______________________________|
 */
+
+import { useState } from "react";
+
+const style = {
+    div: {
+        backgroundColor: "#303540",
+        borderRadius: '10px',
+        padding: "10px",
+        margin: "10px",
+        gap: "10px",
+    },
+    input: {
+        gap: '5px',
+        height: '40px',
+        width: '200px',
+        borderRadius: '25px',
+        marginLeft: '10px',
+        textAlign: 'center',
+        fontSize: '20px'
+    },
+    button: {
+        borderRadius: "5px",
+        backgroundColor: "#505560",
+        padding: "10px",
+        margin: "10px",
+        fontSize: '16px',
+        fontWeight: '500',
+        marginLeft: '20px'
+    },
+    p: {
+        fontSize: '26px',
+        color: '#eee'  
+    }
+}
+
+export default function AtvCumprimenta() {
+    const [nome, setNome] = useState("");
+    const [mostrar, setMostrar] = useState(false);
+
+    function salvarNome() {
+        setMostrar(true);
+    }
+
+    return (
+        <div style={style.div}>
+            <p style={style.p}>Olá, qual seu nome?</p>
+
+            <input
+                type="text"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                style={style.input}
+            />
+
+            <button style={style.button} onClick={salvarNome}>
+                Salvar
+            </button>
+
+            {mostrar && (
+                <p style={style.p}>É um prazer lhe conhecer, <strong>{nome}</strong></p>
+            )}
+        </div>
+    );
+}

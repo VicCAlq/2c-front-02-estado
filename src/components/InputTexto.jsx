@@ -36,7 +36,7 @@ const estilo = {
   },
   input: {
     borderRadius: "5px",
-    backgroundColor: "#bbb",
+    backgroundColor: "#494848",
     padding: "4px",
   }
 }
