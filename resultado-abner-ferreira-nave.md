@@ -1,0 +1,11 @@
+Data de atualização: Dia 25/8/2026 às 16:54 
+
+| Questão | Teste | Entregue | Correto | Mensagem de Erro |
+|---------|-------|----------|---------|------------------|
+| AtvCumprimenta | Renderiza o componente como esperado | ✅ | ❌ | ReferenceError: textoInserido is not defined |
+| AtvCumprimenta | mostra a pergunta e cumprimenta o usuário com o nome digitado | ✅ | ❌ | ReferenceError: textoInserido is not defined |
+| AtvDobra | Renderiza o componente como esperado | ✅ | ❌ | Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports. |
+| AtvDobra | exibe o número recebido e dobra o valor a cada clique no botão | ✅ | ❌ | Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports. |
+| AtvMudaConteudo | Altera para a aba da página em construção | ✅ | ❌ | Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports. |
+| AtvMudaConteudo | alterna entre o texto da primeira aba e os blocos coloridos da segunda | ✅ | ❌ | Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports. |
+| AtvTelefoneSemFio | troca o conteúdo abaixo ao clicar nos botões e repassa a mensagem para o outro lado | ✅ | ❌ | Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports. |
