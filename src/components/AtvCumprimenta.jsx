@@ -19,3 +19,35 @@ _________________________________
 | É um prazer lhe conhecer...   |
 |_______________________________|
 */
+
+import { useState } from "react";
+    
+function AtvCumprimenta() {
+  const [nome, setNome] = useState("");
+  const [nomeSalvo, setNomeSalvo] = useState("");
+
+  function salvarNome() {
+    setNomeSalvo(nome);
+  }
+
+  return (
+    <div>
+      <p>Olá, qual seu nome?</p>
+        
+      <input
+        type="text"
+        placeholder="Nome aqui"
+        value={nome}
+        onChange={(e) => setNome(e.target.value)}
+      />
+
+      <button onClick={salvarNome}>Salvar</button>
+
+      {nomeSalvo && (
+        <p>É um prazer lhe conhecer, {nomeSalvo}</p>
+      )}
+    </div>
+  );
+}
+
+export default AtvCumprimenta;
