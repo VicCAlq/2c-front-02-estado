@@ -11,7 +11,7 @@ export default function AtvDobra({ numero }) {
   const [valor, setValor] = useState(numero);
 
   function dobrar() {
-    setValor((atual) => atual ** 2);
+    setValor((atual) => atual * 2);
   }
 
   return (
